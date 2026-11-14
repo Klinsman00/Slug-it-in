@@ -62,24 +62,24 @@ animations = [{
 
 [node name="Node2D" type="Node2D" unique_id=1037272463]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1677059271]
+[node name="Player1" type="CharacterBody2D" parent="." unique_id=1677059271]
 script = ExtResource("2_0e48y")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1100444021]
+[node name="Sprite2D" type="Sprite2D" parent="Player1" unique_id=1100444021]
 position = Vector2(500, 300)
 texture = ExtResource("1_wtcfe")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1989120432]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player1" unique_id=1989120432]
 position = Vector2(500, 300)
 shape = SubResource("CapsuleShape2D_b1iib")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=989179406]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player1" unique_id=989179406]
 sprite_frames = SubResource("SpriteFrames_b1iib")
 animation = &"fighting"
 
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="." unique_id=1955348069]
+[node name="Chared" type="CharacterBody2D" parent="." unique_id=1955348069]
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2" unique_id=1653341441]
+[node name="Sprite2D" type="Sprite2D" parent="Chared" unique_id=1653341441]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2" unique_id=1799855131]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chared" unique_id=1799855131]
 shape = SubResource("CapsuleShape2D_hov3x")
