@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://c6c1wl7u51pe5"]
+
+[ext_resource type="Script" uid="uid://bkvj4c2etq1hw" path="res://start_menu.gd" id="1_jwbto"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_b1iib"]
+
+[node name="Startmenu" type="Control" unique_id=484008805]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jwbto")
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1097326365]
+modulate = Color(1, 0.4117647, 1, 1)
+layout_mode = 0
+offset_left = 84.0
+offset_top = 41.0
+offset_right = 152.5
+offset_bottom = 72.0
+placeholder_text = "ENTER YOUR NAME"
+alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1016682797]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 86.0
+offset_right = 146.0
+offset_bottom = 117.0
+text = "START"
+icon = SubResource("CanvasTexture_b1iib")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

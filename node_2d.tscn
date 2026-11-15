@@ -7,58 +7,9 @@
 radius = 76.0
 height = 250.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
-atlas = ExtResource("1_wtcfe")
-region = Rect2(0, 0, 122, 114)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_epypp"]
-atlas = ExtResource("1_wtcfe")
-region = Rect2(122, 0, 122, 114)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0hol4"]
-atlas = ExtResource("1_wtcfe")
-region = Rect2(0, 114, 122, 114)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q6r6c"]
-atlas = ExtResource("1_wtcfe")
-region = Rect2(122, 114, 122, 114)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_b1iib"]
-animations = [{
-"frames": [],
-"loop": 1,
-"name": &"fighting",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0e48y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_epypp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0hol4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q6r6c")
-}],
-"loop": 1,
-"name": &"jumping",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": 1,
-"name": &"new_animation_4",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": 1,
-"name": &"walking",
-"speed": 5.0
-}]
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hov3x"]
+radius = 43.0
+height = 138.0
 
 [node name="Node2D" type="Node2D" unique_id=1037272463]
 
@@ -72,10 +23,6 @@ texture = ExtResource("1_wtcfe")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ean" unique_id=1989120432]
 position = Vector2(500, 300)
 shape = SubResource("CapsuleShape2D_b1iib")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ean" unique_id=989179406]
-sprite_frames = SubResource("SpriteFrames_b1iib")
-animation = &"fighting"
 
 [node name="Chared" type="CharacterBody2D" parent="." unique_id=1955348069]
 

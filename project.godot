@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="New Game Project"
-run/main_scene="res://node_2d.tscn"
+run/main_scene="uid://c6c1wl7u51pe5"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://tmfpltu0cqaj"
 
 [display]
 

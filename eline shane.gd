@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED: float = 1000.0
 
+
 func _physics_process(_delta: float) -> void:
 	var direction := Vector2.ZERO
 
