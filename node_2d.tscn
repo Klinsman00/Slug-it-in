@@ -8,8 +8,8 @@ radius = 76.0
 height = 250.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hov3x"]
-radius = 43.0
-height = 138.0
+radius = 14.0
+height = 42.0
 
 [node name="Node2D" type="Node2D" unique_id=1037272463]
 
@@ -24,9 +24,23 @@ texture = ExtResource("1_wtcfe")
 position = Vector2(500, 300)
 shape = SubResource("CapsuleShape2D_b1iib")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ean" unique_id=989179406]
+sprite_frames = SubResource("SpriteFrames_b1iib")
+animation = &"fighting"
+
+[node name="PickupArea" type="Area2D" parent="Ean" unique_id=205743487]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Ean/PickupArea" unique_id=542028687]
+position = Vector2(-43, -5)
+scale = Vector2(1.0930117, 1.0103211)
+polygon = PackedVector2Array(491, 196, 605, 324, 620, 362, 601, 377, 510, 378, 511, 410, 410, 414, 366, 351, 384, 294, 418, 246, 458, 196)
+
 [node name="Chared" type="CharacterBody2D" parent="." unique_id=1955348069]
 
 [node name="Sprite2D" type="Sprite2D" parent="Chared" unique_id=1653341441]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chared" unique_id=1799855131]
+[node name="PickupArea" type="CollisionShape2D" parent="Chared" unique_id=1799855131]
 shape = SubResource("CapsuleShape2D_hov3x")
+
+[connection signal="area_entered" from="Ean/PickupArea" to="Ean" method="_on_pickup_area_area_entered"]
+[connection signal="area_entered" from="Chared" to="Chared" method="_on_area_entered"]
