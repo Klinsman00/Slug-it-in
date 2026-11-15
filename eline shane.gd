@@ -19,3 +19,8 @@ func _physics_process(_delta: float) -> void:
 
 	velocity = direction * SPEED
 	move_and_slide()
+
+
+func _on_pickup_area_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Chared"):
+		area.queue_free()
